@@ -15,4 +15,29 @@ const slides = [
 		"image":"slide4.png",
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
-]
+];
+
+// Initialiser la diapositive actuelle
+let currentSlide = 0;
+
+// Sélectionner les éléments DOM
+const arrow_left = document.querySelector('.arrow_left'); 
+const arrow_right = document.querySelector('.arrow_right'); 
+const bannerImg = document.querySelector('.banner-img'); 
+const bannerTagline = document.querySelector('#banner p'); 
+const dotsContainer = document.querySelector(".dots"); 
+
+// Créer les bullet points pour chaque diapositive
+slides.forEach((slide, index) => { 
+    const dot = document.createElement("div"); // Créer un élément div pour le point
+    dot.classList.add("dot"); // Ajouter la classe CSS "dot" au point
+    if (index === 0) {
+        dot.classList.add("dot_selected"); // Ajouter la classe "dot_selected" au premier point
+    }
+    dotsContainer.appendChild(dot); // Ajouter le point au conteneur
+});
+
+// Sélectionner tous les points
+const dots = document.querySelectorAll(".dot");
+
+
