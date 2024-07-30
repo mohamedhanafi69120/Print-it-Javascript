@@ -40,6 +40,23 @@ slides.forEach((slide, index) => {
 // Sélectionner tous les points
 const dots = document.querySelectorAll(".dot");
 
+// Ajouter des écouteurs d'événements pour les bullet points
+dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+        console.log(`Bullet point ${index + 1} cliqué`);
+        currentSlide = index; // Mettre à jour la diapositive actuelle en fonction du point cliqué
+        updateSlide(currentSlide); // Mettre à jour l'affichage
+    });
+});
+
+
+// Fonction pour mettre à jour la diapositive
+function updateSlide(index) {
+    bannerImg.src = `./assets/images/slideshow/${slides[index].image}`; // Mettre à jour l'image de la diapositive
+    bannerTagline.innerHTML = slides[index].tagLine; // Mettre à jour le texte de la diapositive
+    dots.forEach(dot => dot.classList.remove("dot_selected")); // Retirer la classe "dot_selected" de tous les points
+    dots[index].classList.add("dot_selected"); // Ajouter la classe "dot_selected" au point actuel
+}
 
 
 
