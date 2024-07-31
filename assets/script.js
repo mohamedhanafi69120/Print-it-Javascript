@@ -60,7 +60,6 @@ function updateSlide(index) {
 
 
 
-
 // Ajouter des écouteurs d'événements pour les flèches
 arrow_left.addEventListener("click", () => {
     console.log("j'ai cliqué sur la flèche de gauche");
