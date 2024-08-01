@@ -48,7 +48,6 @@ dots.forEach((dot, index) => {
         updateSlide(currentSlide); // Mettre à jour l'affichage
     });
 });
-<<<<<<< HEAD
 
 
 // Fonction pour mettre à jour la diapositive
@@ -59,11 +58,6 @@ function updateSlide(index) {
     dots[index].classList.add("dot_selected"); // Ajouter la classe "dot_selected" au point actuel
 }
 
-
-
-
-=======
->>>>>>> 27be923295f6c031ee240748df7ad8b863a21a70
 
 
 // Fonction pour mettre à jour la diapositive
