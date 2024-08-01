@@ -48,6 +48,7 @@ dots.forEach((dot, index) => {
         updateSlide(currentSlide); // Mettre à jour l'affichage
     });
 });
+<<<<<<< HEAD
 
 
 // Fonction pour mettre à jour la diapositive
@@ -61,7 +62,17 @@ function updateSlide(index) {
 
 
 
+=======
+>>>>>>> 27be923295f6c031ee240748df7ad8b863a21a70
 
+
+// Fonction pour mettre à jour la diapositive
+function updateSlide(index) {
+    bannerImg.src = `./assets/images/slideshow/${slides[index].image}`; // Mettre à jour l'image de la diapositive
+    bannerTagline.innerHTML = slides[index].tagLine; // Mettre à jour le texte de la diapositive
+    dots.forEach(dot => dot.classList.remove("dot_selected")); // Retirer la classe "dot_selected" de tous les points
+    dots[index].classList.add("dot_selected"); // Ajouter la classe "dot_selected" au point actuel
+}
 
 
 
