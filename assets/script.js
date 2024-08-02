@@ -59,17 +59,6 @@ function updateSlide(index) {
 }
 
 
-
-// Fonction pour mettre à jour la diapositive
-function updateSlide(index) {
-    bannerImg.src = `./assets/images/slideshow/${slides[index].image}`; // Mettre à jour l'image de la diapositive
-    bannerTagline.innerHTML = slides[index].tagLine; // Mettre à jour le texte de la diapositive
-    dots.forEach(dot => dot.classList.remove("dot_selected")); // Retirer la classe "dot_selected" de tous les points
-    dots[index].classList.add("dot_selected"); // Ajouter la classe "dot_selected" au point actuel
-}
-
-
-
 // Ajouter des écouteurs d'événements pour les flèches
 arrow_left.addEventListener("click", () => {
     console.log("j'ai cliqué sur la flèche de gauche");
