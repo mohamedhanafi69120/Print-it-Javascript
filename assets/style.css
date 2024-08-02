@@ -126,8 +126,8 @@ header {
 	position: absolute;
 	display: flex;
 	justify-content: space-between;
-	width: 98%;
 	margin: auto;
+	width: 98%;
 	color: white;
 	font-size: 4rem;
 	padding-right: 0.7rem;
